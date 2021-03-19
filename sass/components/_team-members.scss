@@ -1,18 +1,41 @@
 /* Секція наша команда */
 
 .team-members {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: var(--white-back-color);
 
+  @media (max-width: $max-desktop-bp) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $min-desktop-bp) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media (min-width: $min-desktop-bp) {
+      margin-bottom: 50px;
+    }
   }
 
   &__list {
-    display: flex;
     padding: 0;
     margin: 0;
+
+    @media (min-width: $min-tablet-bp) and (max-width: $max-desktop-bp) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -30px;
+      margin-top: -30px;
+    }
+
+    @media (min-width: $min-desktop-bp) {
+      display: flex;
+    }
+
   }
 
   &__item {
@@ -21,17 +44,49 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
+      @media (min-width: $min-tablet-bp) and (max-width: $max-desktop-bp) {
+        flex-basis: calc(100% / 2 - 30px);
+        margin-left: 30px;
+        margin-top: 30px;
+      }
+
     &:not(:last-child) {
-      margin-right: 30px;
+      @media (max-width: $max-tablet-bp) {
+        margin-bottom: 30px;
+      }
+
+      @media (min-width: $min-desktop-bp) {
+        margin-right: 30px;
+      }
     }
   }
 
   &__thumb {
+    @media (max-width: $max-tablet-bp) {
+    max-width: 450px;
+    }
+
+    @media (min-width: $min-tablet-bp) and (max-width: $max-desktop-bp) {
+    max-width: 354px;
+    }
+
+    @media (min-width: $min-desktop-bp) {
     max-width: 270px;
+    }
   }
 
   &__info {
+    @media (max-width: $max-tablet-bp) {
+    padding: 30px 10px 24px;
+    }
+
+    @media (min-width: $min-tablet-bp) and (max-width: $max-desktop-bp) {
+    padding: 30px 74px 24px;
+    }
+
+    @media (min-width: $min-desktop-bp) {
     padding: 30px 32px;
+    }
   }
 
   &__name {
@@ -59,7 +114,7 @@
 
 .social {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0;
   margin: 0;
 

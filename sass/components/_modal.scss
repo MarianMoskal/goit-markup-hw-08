@@ -29,13 +29,21 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  min-width: 528px;
+  min-width: 100vw;
   max-height: 100vh;
   overflow-y: auto;
   padding: 40px;
   background-color: var(--white-text-color-1);
 
   @include transition(transform);
+
+  @media (min-width: 450px) {
+    min-width: 450px;
+  }
+
+  @media (min-width: $min-desktop-bp) {
+    min-width: 528px;
+  }
 
   &__close-button {
     position: absolute;
@@ -60,11 +68,15 @@
   &__title {
     font-style: normal;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 30px;
     letter-spacing: 0.03em;
     margin: 0;
     margin-bottom: 12px;
     color: var(--black-text-color);
+
+    @media (min-width: $min-desktop-bp) {
+      line-height: 23px;
+    }
   }
 }
 
@@ -145,7 +157,11 @@
 }
 
 .checkbox {
-  margin: 0 11px 30px 12px;
+  margin: 0 0 30px 0;
+
+  @media (min-width: $min-desktop-bp) {
+    margin: 0 11px 30px 12px;
+  }
 
   &__input {
     appearance: none;
@@ -177,13 +193,17 @@
   &__label {
     display: flex;
     align-items: center;
-
     margin: 0;
-    font-size: 14px;
-    line-height: 1.714;
+    font-size: 12px;
+    line-height: 1.166;
     letter-spacing: 0.03em;
     color: var(--grey-text-color);
     cursor: pointer;
+
+    @media (min-width: $min-desktop-bp) {
+      font-size: 14px;
+      line-height: 1.714;
+    }
   }
 
   &__link {

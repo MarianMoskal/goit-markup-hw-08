@@ -1,7 +1,11 @@
-/* Footer */
+// /* Footer */
 
 .address {
-  margin-right: 70px;
+  margin: 0 auto;
+
+  @media (min-width: $min-desktop-bp) {
+    margin-right: 70px;
+  }
 
   &__text {
     font-weight: normal;
@@ -18,10 +22,10 @@
   background-color: var(--black-footer-color);
   padding: 60px 0;
 
-  &__container {
-    display: flex;
-    align-items: baseline;
-  }
+  // &__container {
+  //   display: flex;
+  //   align-items: baseline;
+  // }
 
   &__contacts {
     font-weight: normal;
@@ -69,14 +73,18 @@
 }
 
 .subscribe__form {
+  @media (max-width: $max-desktop-bp) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $min-desktop-bp) {
   display: flex;
   align-items: baseline;
+  }
 }
-
 .subscribe__input {
-  width: 358px;
   padding: 14px 15px;
-  margin-right: 12px;
   background-color: inherit;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -86,6 +94,16 @@
   color: var(--white-text-color-1);
 
   @include transition(border-color);
+
+  @media (max-width: $max-desktop-bp) {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  @media (min-width: $min-desktop-bp) {
+    width: 358px;
+    margin-right: 12px;
+  }
 
   &:hover,
   &:focus {

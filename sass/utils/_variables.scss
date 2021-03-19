@@ -12,3 +12,10 @@
   --transition-time: 250ms;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+$min-mobile-bp: 480px;
+$min-tablet-bp: 768px;
+$min-desktop-bp: 1200px;
+$max-mobile-bp: 479px;
+$max-tablet-bp: 767px;
+$max-desktop-bp: 1199px;
