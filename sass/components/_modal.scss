@@ -157,6 +157,8 @@
 }
 
 .checkbox {
+  position: relative;
+  padding-left: 24px;
   margin: 0 0 30px 0;
 
   @media (min-width: $min-desktop-bp) {
@@ -164,16 +166,22 @@
   }
 
   &__input {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(100%);
+    margin: -2px;
   }
 
   &__icon {
-    margin-right: 8.38px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
     cursor: pointer;
     fill: none;
     border: 2px solid var(--black-text-color);
+    border-radius: 4px;
     opacity: 0.3;
     transition: fill var(--transition-time) var(--cubic-bezier),
       opacity var(--transition-time) var(--cubic-bezier);
@@ -191,8 +199,6 @@
   }
 
   &__label {
-    display: flex;
-    align-items: center;
     margin: 0;
     font-size: 12px;
     line-height: 1.166;
@@ -209,7 +215,7 @@
   &__link {
     color: var(--blue-color);
     opacity: 0.7;
-    margin-left: 5px;
+    // margin-left: 5px;
 
     @include transition(opacity);
   }
