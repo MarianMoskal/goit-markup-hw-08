@@ -2,10 +2,10 @@
 
 .address {
   margin: 0 auto 60px;
-  padding: 0 8px;
+  padding: 0;
 
   @media (min-width: $min-tablet-bp) {
-    margin: 0 165px 60px 61px;
+    margin: 0;
   }
 
   @media (min-width: $min-desktop-bp) {
@@ -42,6 +42,25 @@
     }
   }
 
+  &__subcontainer {
+    margin-bottom: 60px;
+
+    @media (min-width: $min-tablet-bp) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      min-width: 100%;
+      padding: 0 74px 0 61px;
+    }
+
+    @media (min-width: $min-desktop-bp) {
+      justify-content: start;
+      min-width: 50%;
+      margin: 0 15px 0 0;
+      padding: 0;
+    }
+  }
+
   &__contacts {
     font-weight: normal;
     font-size: 14px;
@@ -64,14 +83,10 @@
   }
 
   &__social {
-    margin: 0 auto 60px;
+    margin: 0 auto;
 
     @media (min-width: $min-tablet-bp) {
-      margin: 5px 74px 102px 0;
-    }
-
-    @media (min-width: $min-desktop-bp) {
-      margin: 0 93px 0 0;
+      margin: 0;
     }
   }
 
