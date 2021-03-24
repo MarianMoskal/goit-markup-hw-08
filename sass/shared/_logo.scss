@@ -13,13 +13,13 @@
     @include transition(text-shadow);
 
     @media (max-width: $max-tablet-bp) {
-        margin: 0;
-        padding: 6px 0;
+      margin: 0;
+      padding: 6px 0;
     }
 
     @media (min-width: $min-tablet-bp) and (max-width: $max-desktop-bp) {
-        margin-right: 88px;
-        padding: 5px 0;
+      margin-right: 88px;
+      padding: 5px 0;
     }
 
     @media (min-width: $min-desktop-bp) {
@@ -56,7 +56,7 @@
   }
 
   &__subtext--top {
-      color: var(--top-logo-subtext);
+    color: var(--top-logo-subtext);
   }
 
   &__subtext--bottom {

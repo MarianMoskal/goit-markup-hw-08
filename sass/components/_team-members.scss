@@ -35,7 +35,6 @@
     @media (min-width: $min-desktop-bp) {
       display: flex;
     }
-
   }
 
   &__item {
@@ -44,11 +43,11 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-      @media (min-width: $min-tablet-bp) and (max-width: $max-desktop-bp) {
-        flex-basis: calc(100% / 2 - 30px);
-        margin-left: 30px;
-        margin-top: 30px;
-      }
+    @media (min-width: $min-tablet-bp) and (max-width: $max-desktop-bp) {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
 
     &:not(:last-child) {
       @media (max-width: $max-tablet-bp) {
@@ -62,30 +61,34 @@
   }
 
   &__thumb {
-    @media (max-width: $max-tablet-bp) {
-    max-width: 450px;
-    }
+    height: 460px;
 
-    @media (min-width: $min-tablet-bp) and (max-width: $max-desktop-bp) {
-    max-width: 354px;
+    @media (min-width: $min-tablet-bp) {
+      height: 374px;
     }
 
     @media (min-width: $min-desktop-bp) {
-    max-width: 270px;
+      height: 260px;
     }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__info {
     @media (max-width: $max-tablet-bp) {
-    padding: 30px 10px 24px;
+      padding: 30px 10px 24px;
     }
 
     @media (min-width: $min-tablet-bp) and (max-width: $max-desktop-bp) {
-    padding: 30px 74px 24px;
+      padding: 30px 74px 24px;
     }
 
     @media (min-width: $min-desktop-bp) {
-    padding: 30px 32px;
+      padding: 30px 32px;
     }
   }
 

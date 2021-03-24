@@ -13,11 +13,20 @@
   <!--Шапка сторінки-->
   <header class="site-header">
     <div class="container site-header__container">
+      
       <!--Навігація-->
       <nav class="menu">
+
         <!--Логотип-->
         <a class="logo logo--top" href="index.html" rel="home" lang="en">Web<span class="logo__subtext logo__subtext--top">Studio</span>
         </a>
+
+        <!-- кнопка open-mobile-menu -->
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle__icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       
         <ul class="menu__list">
           <li class="menu__item">
@@ -40,6 +49,7 @@
             <use href="./images/icons.svg#icon-envelope"></use>
           </svg>info@devstudio.com</a>
         </li>
+        
         <li class="contacts__item">
           <a class="contacts__link" href="tel:+380961111111">
             <svg class="contacts__icon" width="10" height="16">
@@ -116,19 +126,28 @@
         <ul class="about-us__list">
           <li class="about-us__item">
             <div class="about-us-thumb">
-              <img src="images/img(1).jpg" alt="Програмист работаэт за своим робочим столом">
+              <img 
+                srcset="../images/x1/desktop/img1.jpg 1x, ../images/x2/desktop/img1@2x.jpg 2x" 
+                src="../images/x1/desktop/img1.jpg" 
+                alt="Програмист работаэт за своим робочим столом">
             </div>
             <p class="about-us__overlay">Десктопные приложения</p>
           </li>
           <li class="about-us__item">
             <div class="about-us-thumb">
-              <img src="images/img(2).jpg" alt="Дизайнер разрабатывает приложение для смартфонов">
+              <img 
+                srcset="../images/x1/desktop/img2.jpg 1x, ../images/x2/desktop/img2@2x.jpg 2x"
+                src="../images/x1/desktop/img2.jpg" 
+                alt="Дизайнер разрабатывает приложение для смартфонов">
             </div>
             <p class="about-us__overlay">Мобильные приложения</p>
           </li>
           <li class="about-us__item">
             <div class="about-us-thumb">
-              <img src="images/img(3).jpg" alt="Художник создает веб дизайн вибырая цвет на планшете">
+              <img 
+                srcset="../images/x1/desktop/img3.jpg 1x, ../images/x2/desktop/img3@2x.jpg 2x"
+                src="../images/x1/desktop/img3.jpg" 
+                alt="Художник создает веб дизайн вибырая цвет на планшете">
             </div>
             <p class="about-us__overlay">Дизайнерские решения</p>
           </li>
@@ -143,7 +162,11 @@
         <ul class="team-members__list">
           <li class="team-members__item">
             <div class="team-members__thumb">
-              <img src="images/img(4).jpg" alt="член команды">
+              <img 
+                class="team-members__img" 
+                srcset="../images/x1/mobile/tm1.jpg 1x, ../images/x2/mobile/tm1@2x.jpg 2x"
+                src="../images/x1/mobile/tm1.jpg" 
+                alt="член команды">
             </div>
             <div class="team-members__info">
               <h3 class="team-members__name">Игорь Демьяненко</h3>
@@ -190,7 +213,11 @@
           </li>
           <li class="team-members__item">
             <div class="team-members__thumb">
-              <img src="images/img(5).jpg" alt="член команды">
+              <img 
+                class="team-members__img" 
+                srcset="../images/x1/mobile/tm2.jpg 1x, ../images/x2/mobile/tm2@2x.jpg 2x"
+                src="../images/x1/mobile/tm2.jpg" 
+                alt="член команды">
             </div>
             <div class="team-members__info">
               <h3 class="team-members__name">Ольга Репина</h3>
@@ -237,7 +264,11 @@
           </li>
           <li class="team-members__item">
             <div class="team-members__thumb">
-              <img src="images/img(6).jpg" alt="член команды">
+              <img 
+                class="team-members__img"
+                srcset="../images/x1/mobile/tm3.jpg 1x, ../images/x2/mobile/tm3@2x.jpg 2x" 
+                src="../images/x1/mobile/tm3.jpg" 
+                alt="член команды">
             </div>
             <div class="team-members__info">
               <h3 class="team-members__name">Николай Тарасов</h3>
@@ -284,7 +315,11 @@
           </li>
           <li class="team-members__item">
             <div class="team-members__thumb">
-              <img src="images/img(7).jpg" alt="член команды">
+              <img 
+                class="team-members__img" 
+                srcset="../images/x1/mobile/tm4.jpg 1x, ../images/x2/mobile/tm4@2x.jpg 2x"
+                src="../images/x1/mobile/tm4.jpg" 
+                alt="член команды">
             </div>
             <div class="team-members__info">
               <h3 class="team-members__name">Михаил Ермаков</h3>
@@ -384,6 +419,61 @@
       </div>
     </section>
   </main>
+
+  <!-- mobile-menu -->
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+      <svg class="menu-toggle__icon" width="18.68" height="18.68">
+        <use href="./images/icons.svg#icon-close-menu"></use>
+      </svg>
+    </button>
+
+    <div class="mobile-menu">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link mobile-menu__link--active" href="./index.html">Студия</a>
+        </li>
+      
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="./portfolio.html">Портфолио</a>
+        </li>
+      
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#">Контакты</a>
+        </li>
+      </ul>
+      
+      <!--Контакти посилання-->
+      <ul class="mobile-contacts">
+        <li class="mobile-contacts__item">
+          <a class="mobile-contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
+        </li>
+      
+        <li class="mobile-contacts__item" lang="en">
+          <a class="mobile-contacts__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+    </div>
+      
+      <ul class="mobile-social">
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">Twitter</a>
+        </li>
+      
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">Instagram</a>
+        </li>
+      
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">Facebook</a>
+        </li>
+      
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">LinkedIn</a>
+        </li>
+      </ul>
+    
+  </div>
 
   <footer class="footer">
     <div class="container footer__container">
@@ -513,6 +603,12 @@
       </form>
     </div>
   </div>
-  <script src="./js/modal.js"></script>
+  
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+  integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+  crossorigin="anonymous"></script>
+<script defer src="js/mobile-menu.js"></script>
+<script src="./js/modal.js"></script>
+
 </body>
 </html>

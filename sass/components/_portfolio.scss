@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $min-desktop-bp) {
-  padding: 94px 0;
+    padding: 94px 0;
   }
 
   &__buttons {
@@ -18,14 +18,12 @@
       white-space: nowrap;
       margin: 0 auto 30px;
     }
-    
+
     @media (min-width: $min-desktop-bp) {
-    margin: 0 auto 50px;
+      margin: 0 auto 50px;
     }
 
     &-list {
-      // display: flex;
-      // justify-content: center;
       margin: 0 auto;
       padding: 0;
     }
@@ -33,7 +31,7 @@
 
   &__item {
     display: inline-block;
-    
+
     @media (max-width: $max-tablet-bp) {
       margin-bottom: 15px;
     }
@@ -132,15 +130,15 @@
 
   &__thumb {
     @media (max-width: $max-tablet-bp) {
-    max-width: 450px;
+      max-width: 450px;
     }
 
     @media (min-width: $min-tablet-bp) {
-    max-width: 354px;
+      max-width: 354px;
     }
 
     @media (min-width: $min-desktop-bp) {
-    max-width: 370px;
+      max-width: 370px;
     }
   }
 
@@ -148,7 +146,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(100%);
+    transform: translateY(101%);
     @include transition(transform);
 
     width: 100%;
@@ -170,7 +168,7 @@
     border-left: 1px solid rgba(238, 238, 238, 1);
     border-right: 1px solid rgba(238, 238, 238, 1);
     border-bottom: 1px solid rgba(238, 238, 238, 1);
-    
+
     @media (min-width: $min-tablet-bp) {
       flex-grow: 1;
     }
