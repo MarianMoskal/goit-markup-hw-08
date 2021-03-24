@@ -964,7 +964,7 @@ img {
   padding: 3px 0;
 }
 
-.h2-hidden visually-hidden {
+.h2-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
